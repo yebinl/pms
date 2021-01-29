@@ -1,0 +1,25 @@
+<br>
+<table class="table table-hover table-striped table-borderless">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Phone</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @guests.each do |guest| %>
+    <% if guest.room == nil %>
+      <tr>
+        <td><%= guest.name %></td>
+        <td><%= guest.phone %></td>
+        <td>
+        <%= button_to 'Assign', {:rid => params[:rid], :gid => guest.id}, class:'btn btn-secondary btn-sm' %>
+        </td>
+
+      </tr>
+    <% end %>
+    <% end %>
+  </tbody>
+</table>

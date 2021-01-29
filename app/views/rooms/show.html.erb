@@ -1,0 +1,9 @@
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @room.number %></h5>
+    <p class="card-text"><%= @room.description %></p>
+    <%= link_to 'Edit', edit_room_path(@room), class:"btn btn-secondary" %>
+    <%= link_to 'Back', rooms_path, class:"btn btn-secondary" %>
+  </div>
+</div>
