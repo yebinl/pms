@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Git Clone
+    git clone https://github.com/yebinl/pms.git
 
-Things you may want to cover:
+* Versions
+    Ruby 3.0.0
+    Rails 6.1.1
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+* Database 
+    sqlite3
 
 * Database initialization
+    Run the following commands to create and setup the database:
+    bundle exec rake db:create
+    bundle exec rake db:setup
 
-* How to run the test suite
+* Run the server
+    bundle exec rails s
 
-* Services (job queues, cache servers, search engines, etc.)
+* URL to visit the site:
+    http://localhost:3000
 
-* Deployment instructions
-
-* ...
+This is a sample PMS (Property Management System). It has following functions: 1. Sign up, Log in, Log out and Delete account 2. Add, remove, edit and delete a room 3. Add, remove, edit and delete a guest 4. Assign a guest to a room, and check out a guest from a room.
