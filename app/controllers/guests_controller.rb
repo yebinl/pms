@@ -50,10 +50,17 @@ class GuestsController < ApplicationController
 
   # DELETE /guests/1 or /guests/1.json
   def destroy
-    @guest.destroy
-    respond_to do |format|
-      format.html { redirect_to guests_url, notice: "Guest was successfully destroyed." }
-      format.json { head :no_content }
+    if @guest.room == nil
+      @guest.destroy
+      respond_to do |format|
+        format.html { redirect_to guests_url, notice: "Guest was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to rooms_url, notice: "Check out first." }
+        format.json { head :no_content }
+      end
     end
   end
 
